@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
-import { EventsThumbailsComponent } from './events/events-thumbails.component';
+import { EventThumbailsComponent } from './events/event-thumbails.component';
 
 @NgModule({
   declarations: [
     EventsAppComponent,
     EventsListComponent,
-    EventsThumbailsComponent
+    EventThumbailsComponent
   ],
   imports: [
     BrowserModule
