@@ -6,6 +6,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     <div class="well">
         <h2> Name: {{event.name}} </h2>
         <h2> Price: \${{event.price}} </h2>
+        <div *ngIf="event?.location">
+            <span>Location: {{event.location.name}}</span>
+        </div>
     </div>
     <button class="btn btn-primary" (click)="handleClickMe()">Click Me</button>`,
     styles: [`
@@ -16,7 +19,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class EventThumbailsComponent{
     @Input() event:any
     @Output() eventClick = new EventEmitter()
-    someValue:any = "come value"
+    someValue:any = "some value"
 
     handleClickMe() {
         this.eventClick.emit(this.event.name)

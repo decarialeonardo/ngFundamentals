@@ -1,5 +1,8 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { NgForOf } from '@angular/common';
+import { EventService } from './shared/event.service';
+import { ToastrService } from '../common/toastr.service';
+
 
 @Component({
     selector: 'events-list',
@@ -7,19 +10,26 @@ import { NgForOf } from '@angular/common';
     <div>
         <h1> Upcoming Events </h1>
         <hr>
-        <events-thumbails #thumbail (eventClick)="handleEventClicked($event)" *ngFor="let event of events" [event] = "event"></events-thumbails>
-        <h3>{{thumbail.someValue}}</h3>
-        <button class="btn btn-primary" (click)="thumbail.logFoo()">Log me some foo</button>
+        <div class="row">
+            <div *ngFor="let event of events" class="col-md-5">
+                <events-thumbails (click)="handleEventClicked(event.name)" [event] = "event"></events-thumbails>
+            </div>
+        </div>
     </div>`
 })
 
-export class EventsListComponent{
-    events = [{
-        name: 'Angular',
-        price: 2093
-    }]
+export class EventsListComponent implements OnInit{
+    events:any[]
 
-    handleEventClicked(data){
-        console.log(data)
+    constructor(private eventService:EventService, private toastrService:ToastrService){
+        
+    }
+
+    ngOnInit(){
+        this.events = this.eventService.getEvents();
+    }
+
+    handleEventClicked(eventName){
+        this.toastrService.success(eventName);
     }
 }
