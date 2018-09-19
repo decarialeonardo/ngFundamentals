@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
     selector: 'events-thumbails',
     template:  `
-    <div class="well">
+    <div [routerLink]="['/events',event.id]" class="well">
         <h2> Name: {{event.name}} </h2>
         <h2> Price: \${{event.price}} </h2>
         <div *ngIf="event?.location">
