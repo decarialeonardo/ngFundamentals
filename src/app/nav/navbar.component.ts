@@ -1,5 +1,5 @@
-import { Component} from '@angular/core'
-
+import { Component, Injectable } from '@angular/core'
+import { AuthService } from '../user/auth.service';
 
 @Component({
     selector: 'nav-bar',
@@ -9,5 +9,9 @@ import { Component} from '@angular/core'
     ]
 })
 
+@Injectable()
 export class NavbarComponent{
+    constructor(private auth:AuthService){
+
+    }
 }
