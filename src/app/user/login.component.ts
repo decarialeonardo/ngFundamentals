@@ -4,10 +4,16 @@ import { AuthService } from './auth.service';
 
 @Component({
   templateUrl: './login.component.html',
+  styles:[`
+    em { float: left; color:red; padding-left: 10px;}
+  `]
 })
 
 export class LoginComponent {
-
+    username
+    password
+    mouseoverLogin
+    
     constructor(private router:Router,private authService:AuthService){
 
     }
