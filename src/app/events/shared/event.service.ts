@@ -26,7 +26,25 @@ export class EventService {
 const EVENTS = [{
     id: 1,
     name: 'Angular',
-    price: 2093
+    price: 2093,
+    sessions: [{
+        id: 1,
+        name: "leonardo with angular",
+        presenter: "Leonardo",
+        duration: 30,
+        level: 'beginner',
+        abstract: 'prueba1',
+        voters: []
+    },{
+        id: 2,
+        name: "leonardo with angular 2",
+        presenter: "Leonardo 2",
+        duration: 60,
+        level: 'intermediate',
+        abstract: 'prueba2',
+        voters: []
+    }]
+    
 },{
     id: 2,
     name: 'Angular2',
