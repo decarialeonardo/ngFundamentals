@@ -31,7 +31,7 @@ const EVENTS = [{
         id: 1,
         name: "leonardo with angular",
         presenter: "Leonardo",
-        duration: 30,
+        duration: 2,
         level: 'beginner',
         abstract: 'prueba1',
         voters: []
@@ -39,7 +39,7 @@ const EVENTS = [{
         id: 2,
         name: "leonardo with angular 2",
         presenter: "Leonardo 2",
-        duration: 60,
+        duration: 3,
         level: 'intermediate',
         abstract: 'prueba2',
         voters: []
