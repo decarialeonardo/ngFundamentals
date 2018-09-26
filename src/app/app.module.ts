@@ -14,10 +14,14 @@ import {
 
 } from './events/index';
 
+import {
+  ToastrService,
+  CollapsibleWellComponent
+} from './common/index';
+
 import { EventsAppComponent } from './events-app.component';
 import { NavbarComponent } from './nav/navbar.component';
 
-import { ToastrService } from './common/toastr.service';
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
@@ -35,7 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleWellComponent
   ],
   imports: [
     BrowserModule,
