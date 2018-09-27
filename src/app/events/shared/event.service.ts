@@ -34,15 +34,15 @@ const EVENTS = [{
         duration: 2,
         level: 'beginner',
         abstract: 'prueba1',
-        voters: []
+        voters: [1,2,3,4]
     },{
         id: 2,
-        name: "leonardo with angular 2",
+        name: "Aleonardo with angular 2",
         presenter: "Leonardo 2",
         duration: 3,
         level: 'intermediate',
         abstract: 'prueba2',
-        voters: []
+        voters: [1,2]
     }]
     
 },{
